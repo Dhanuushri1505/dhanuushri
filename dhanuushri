@@ -1,0 +1,28 @@
+
+import java.util.*;
+import java.io.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    String s=sc.nextLine();
+	    int count=0;
+	    Integer l=s.length();
+	    String str[]=s.split("");
+	    char arr[]=new char[100];
+	    for (int i=0;i<l;i++)
+	    {
+	        for(int j=i+1;j<l;j++)
+	        {
+	            if(str[i].contains(str[j]))
+	            {
+	                count=count+1;
+	                break;
+	            }
+	        }
+	    }
+	    int ct=l-count;
+	   System.out.println(ct);
+
+	}
+}
